@@ -255,5 +255,15 @@ export const generalRules: RuleCategory = {
                 }
             ],
         },
+        {
+            level: AlertLevel.ERROR,
+            title: '[EXPERIMENTAL RULE] Oculus without Embeddium',
+            description: 'Install Embeddium or disable Oculus.',
+            candidates: [
+                'Error loading class: net/caffeinemc/mods/sodium/api/memory/MemoryIntrinsics (java.lang.ClassNotFoundException: net.caffeinemc.mods.sodium.api.memory.MemoryIntrinsics)'
+            ],
+            onlyAppearsOnce: false, // If this rule should only find the first match
+            versionChecks: []
+        },
     ],
 }
