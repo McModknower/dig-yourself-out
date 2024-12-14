@@ -262,8 +262,22 @@ export const generalRules: RuleCategory = {
             candidates: [
                 'Error loading class: net/caffeinemc/mods/sodium/api/memory/MemoryIntrinsics (java.lang.ClassNotFoundException: net.caffeinemc.mods.sodium.api.memory.MemoryIntrinsics)'
             ],
-            onlyAppearsOnce: false, // If this rule should only find the first match
-            versionChecks: []
+            onlyAppearsOnce: true,
+            versionChecks: [],
+        },
+        {
+            level: AlertLevel.ERROR,
+            title: '[EXPERIMENTAL RULE] Distant horizons + Oculus incompatibility',
+            description: '1.21.1+\r\n' +
+                'Use DH 2.2 and Iris 1.8 (not oculus - Iris has a neoforge version now)\r\n\r\n' +
+                '1.20.1 and before\r\n' +
+                'Neo/Forge: Downgrade to DH 2.1.4 or below.\r\n' +
+                'Fabric: Use DH 2.2 and Iris 1.7.5.',
+            candidates: [
+                'Unexpecteded ClassMetadataNotFoundException whilst transforming the mixin class: [MAIN Applicator Phase -> mixins.oculus.compat.dh.json'
+            ],
+            onlyAppearsOnce: true,
+            versionChecks: [],
         },
     ],
 }
